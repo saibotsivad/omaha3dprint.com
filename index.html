@@ -8,7 +8,7 @@
     <meta name="author" content="">
 
     <!-- Le styles -->
-    <link href="./bootstrap.css" rel="stylesheet">
+    <link href="./bootstrap.min.css" rel="stylesheet">
     <style>
 
     /* GLOBAL STYLES
@@ -251,7 +251,6 @@
 
     }
     </style>
-    <link href="./bootstrap-responsive.css" rel="stylesheet">
 
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -269,31 +268,30 @@
 
     <!-- NAVBAR
     ================================================== -->
-    <div class="navbar-wrapper">
-      <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
-      <div class="container">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Omaha 3D Print</a>
+        </div>
 
-        <div class="navbar navbar-inverse">
-          <div class="navbar-inner">
-            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
-            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="brand" href="#">Omaha3DPrint.com</a>
-            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
-            <div class="nav-collapse collapse">
-              <ul class="nav">
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-              </ul>
-            </div><!--/.nav-collapse -->
-          </div><!-- /.navbar-inner -->
-        </div><!-- /.navbar -->
-
-      </div> <!-- /.container -->
-    </div><!-- /.navbar-wrapper -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#printLocal">Print Local</a></li>
+            <li><a href="#printAtHome">Print At Home</a></li>
+            <li><a href="#printAtHome">Print Elsewhere</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://www.zombo.com">Link</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
 
     <!-- Carousel
@@ -305,7 +303,7 @@
           <div class="container">
             <div class="carousel-caption">
               <h1>3D Printing In Omaha</h1>
-              <p class="lead">Come visit KüL 3D, your local 3D printing resource. We can provide you with 3D printing, 3D scanning, engineering, and other services.</p>
+              <p class="lead">Come visit KüL 3D, your local 3D printing resource for 3D printing, 3D scanning, engineering, and more.</p>
               <a class="btn btn-large btn-primary" href="http://www.kul3d.com/">Visit Now!</a>
             </div>
           </div>
@@ -315,17 +313,51 @@
 
     <div class="container marketing">
 
-      <hr class="featurette-divider">
+      <!-- <hr class="featurette-divider"> -->
 
-      <div class="featurette" id="about">
-        <img class="featurette-image pull-right" src="./archer_stl.png">
-        <h2 class="featurette-heading">About Us. <span class="muted">Just two guys with a dream.</span></h2>
-        <p class="lead">Omaha 3D Print was founded by Nathan and Tobias Davis with the goal of becoming Omaha's local 3D printing resource. Since then Nathan Davis has moved to <a href="http://www.kul3d.com/">KüL 3D</a> to have a greater impact on the 3D printing community; thus, Omaha 3D Print officially no longer offers services. If you need 3D printing, scanning, or engineering services, contact <a href="http://www.kul3d.com/">KüL 3D</a>.</p>
-        <p class="lead">With the power of 3D printing a digital model can be turned into a physical object you can hold in your hands. 3D prints are created out of thin air (thick plastic, actually) from a 3D model file. You can find many models already made at <a href="http://www.thingiverse.com/">Thingiverse</a>. If you don't have the file, <a href="http://www.kul3d.com/">KüL 3D</a> offers consulting services to help design your creation and they're staffed with some really awesome people.</p>
+      <div class="featurette" id="printLocal">
+        <h2 class="featurette-heading">Print Local. <span class="muted">Resources for 3D Printing in Omaha.</span></h2>
+      </div>
+      <p class="lead">If you have questions about 3D printing, need something printed, or need something designed or engineered; these places might be able to help you.</p>
+      <div class="row">
+        <div class="col-xs-3">
+          <img class="img-responsive" src="DoSpace.jpg">
+        </div>
+        <div class="col-xs-9">
+          <h2><a href="http://www.dospace.org/">Do Space</a></h2>
+          <p class="lead">If you want to play around with 3D printing, the Do Space has its very own 3D printing lab staffed with kind people who can help you print your creation. They also have software you can use to design your printed parts. Basically, if you're okay with spending your time figuring out how to design something that you can then print, check out the Do Space. It's first-come first-serve at the Do Space, so you could be waiting for your turn on the printer. If you don't want to spend the time designing whatever it is you would like to print, there are other services that can help you out.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3">
+          <img class="img-responsive" src="KuL3D.jpg">
+        </div>
+        <div class="col-xs-9">
+          <h2><a href="http://www.kul3d.com/">KüL 3D</a></h2>
+          <p class="lead">Not only does KüL 3D provide printing services, they also offer engineering services. So for those who don't have the patience or ability to create their own models, they can come to KüL 3D to create a 3D model which can then be printed. In some cases you might want to go from 3D print to manufacturing; KüL 3D can help you create the model to send to a manufacturer since they are staffed with mechanical engineers.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3">
+          <img class="img-responsive" src="Tethon3D.png">
+        </div>
+        <div class="col-xs-9">
+          <h2><a href="http://tethon3d.com/">Tethon 3D</a></h2>
+          <p class="lead">Need something printed in ceramic? Tethon 3D can help you out with that! Tethon 3D is continually researching 3D printed ceramics and offers printing services.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3">
+          <img class="img-responsive" src="OmahaMakerGroup.jpg">
+        </div>
+        <div class="col-xs-9">
+          <h2><a href="http://omahamakergroup.org/">Omaha Maker Group</a></h2>
+          <p class="lead">Want to join with a bunch of other locals working together to create their projects? This is the place for that. The Omaha Maker Group has a 3D printer, laser cutter, mill, electronics equipment, and much more. If you join you have access to the shop where you are free to use the tools and equipment therein.</p>
+        </div>
       </div>
 
-      <div class="featurette" id="contact">
-        <h2 style="text-align:center;margin-bottom:50px;" class="featurette-heading">Need Something Printed? <span class="muted">Contact Kühl 3D.</span></h2>
+      <div class="featurette" id="printAtHome">
+        <h2 style="text-align:center;margin-bottom:50px;" class="featurette-heading">Need Something Printed? <span class="muted">Contact KüL 3D.</span></h2>
         <p style="text-align:center;"><a class="btn btn-large btn-primary" href="http://www.kul3d.com/">Visit KüL 3D Now!</a></p>
       </div>
 
